@@ -16,5 +16,34 @@ namespace ProjetoAgenciaTI11T.View
         {
             InitializeComponent();
         }
+
+        private void arquivoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void cadastrarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TelaCadastrarCliente cliente = new TelaCadastrarCliente();
+            cliente.Show();
+        }
+
+        private void cadastrarToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            TelaCadastroFuncionario funcionario = new TelaCadastroFuncionario();
+            funcionario.Show();
+        }
+
+        private void cadastrarToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            TelaCadastrarPacote pacote = new TelaCadastrarPacote();
+            pacote.Show();
+        }
+
+        private void registrarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TelaCadastrarVendas vendas = new TelaCadastrarVendas();
+            vendas.Show();
+        }
     }
 }
