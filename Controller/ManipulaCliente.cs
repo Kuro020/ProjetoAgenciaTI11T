@@ -18,10 +18,10 @@ namespace ProjetoAgenciaTI11T.Controller
 
             try
             {
-                cmd.Parameters.AddWithValue("@nomeCli");
-                cmd.Parameters.AddWithValue("@emailCli");
-                cmd.Parameters.AddWithValue("@senhaCli");
-                cmd.Parameters.AddWithValue("@imagemCli");
+                cmd.Parameters.AddWithValue("@nomeCli","Maria da Graça");
+                cmd.Parameters.AddWithValue("@emailCli","maria@email.com");
+                cmd.Parameters.AddWithValue("@senhaCli","123");
+                cmd.Parameters.AddWithValue("@imagemCli","");
             }
         }
     }
