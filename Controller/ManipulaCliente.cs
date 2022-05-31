@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
+using System.Windows.Forms;
+using ProjetoAgenciaTI11T.Model;
 
 namespace ProjetoAgenciaTI11T.Controller
 {
@@ -18,10 +20,35 @@ namespace ProjetoAgenciaTI11T.Controller
 
             try
             {
-                cmd.Parameters.AddWithValue("@nomeCli","Maria da Graça");
-                cmd.Parameters.AddWithValue("@emailCli","maria@email.com");
-                cmd.Parameters.AddWithValue("@senhaCli","123");
-                cmd.Parameters.AddWithValue("@imagemCli","");
+                cmd.Parameters.AddWithValue("@nomeCli",Clientes.NomeCli);
+                cmd.Parameters.AddWithValue("@emailCli",Clientes.EmailCli);
+                cmd.Parameters.AddWithValue("@senhaCli",Clientes.SenhaCli);
+                cmd.Parameters.AddWithValue("@imagemCli",Clientes.ImageCli);
+
+                SqlParameter nv = cmd.Parameters.AddWithValue("@codigoCli", SqlDbType.Int);
+                nv.Direction = ParameterDirection.Output;
+
+                cn.Open();
+                cmd.ExecuteNonQuery();
+
+                var resposta = System.Windows.Forms.MessageBox.Show("Cadastro do cliente efetuado com sucesso, deseja efetuar um novo registro?",
+                    "Atenção",MessageBoxButtons.YesNo,System.Windows.Forms.MessageBoxIcon.Exclamation
+                    );
+
+                if(resposta == DialogResult.Yes)
+                {
+                    Clientes.Retorno = "Sim";
+                    return;
+                }
+                else
+                {
+                    Clientes.Retorno = "Não";
+                    return;
+                }
+            }
+            catch
+            {
+
             }
         }
     }
