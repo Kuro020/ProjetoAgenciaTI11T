@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ProjetoAgenciaTI11T.Model;
+using ProjetoAgenciaTI11T.Controller;
 
 namespace ProjetoAgenciaTI11T.View
 {
@@ -17,11 +20,47 @@ namespace ProjetoAgenciaTI11T.View
             InitializeComponent();
         }
 
+        public void LimparTela()
+        {
+            foreach (Control ctl in this.Controls)
+            {
+                if (ctl is TextBox)
+                {
+                    ctl.Text = string.Empty;
+                }
+                else if (ctl is PictureBox)
+                {
+                    pbxImagem.Image = null;
+                }
+            }
+        }
+
+
         private void btnSalvar_Click(object sender, EventArgs e)
         {
             if(tbxNome.Text == ""| tbxEmail.Text == ""| tbxSenha.Text == ""| pbxImagem.Image == null)
             {
                 MessageBox.Show("Preencha todas as informações corretamente.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            Clientes.NomeCli = tbxNome.Text;
+            Clientes.EmailCli = tbxEmail.Text;
+            Clientes.SenhaCli = tbxSenha.Text;
+
+            MemoryStream memoryStream = new MemoryStream();
+            pbxImagem.Image.Save(memoryStream, pbxImagem.Image.RawFormat);
+            Clientes.ImageCli = memoryStream.ToArray();
+
+            ManipulaCliente manipulaClientes = new ManipulaCliente();
+            manipulaClientes.cadastrarCliente();
+
+            if (Clientes.Retorno == "Sim")
+            {
+                LimparTela();
+            }
+            else if (Clientes.Retorno == "Não")
+            {
+                this.Close();
             }
         }
 
