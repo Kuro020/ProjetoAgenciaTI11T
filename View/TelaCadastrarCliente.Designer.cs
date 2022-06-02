@@ -39,6 +39,7 @@ namespace ProjetoAgenciaTI11T.View
             this.pbxImagem = new System.Windows.Forms.PictureBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
+            this.openFileDialogImagem = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.pbxImagem)).BeginInit();
             this.SuspendLayout();
             // 
@@ -117,6 +118,7 @@ namespace ProjetoAgenciaTI11T.View
             this.btnBuscar.TabIndex = 9;
             this.btnBuscar.Text = "Buscar Imagem";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // btnSalvar
             // 
@@ -127,6 +129,10 @@ namespace ProjetoAgenciaTI11T.View
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
+            // 
+            // openFileDialogImagem
+            // 
+            this.openFileDialogImagem.FileName = "openFileDialogImagem";
             // 
             // TelaCadastrarCliente
             // 
@@ -163,5 +169,6 @@ namespace ProjetoAgenciaTI11T.View
         private System.Windows.Forms.PictureBox pbxImagem;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Button btnSalvar;
+        private System.Windows.Forms.OpenFileDialog openFileDialogImagem;
     }
 }

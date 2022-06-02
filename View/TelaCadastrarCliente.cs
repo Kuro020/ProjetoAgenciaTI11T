@@ -24,5 +24,14 @@ namespace ProjetoAgenciaTI11T.View
                 MessageBox.Show("Preencha todas as informações corretamente.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            openFileDialogImagem.Filter = "Escolha uma imagem (*.jpg;*.png;*.jpeg)" + "| *.jpg;*.jpeg;*.png";
+            if (openFileDialogImagem.ShowDialog() == DialogResult.OK)
+            {
+                pbxImagem.Image = Image.FromFile(openFileDialogImagem.FileName);
+            }
+        }
     }
 }
