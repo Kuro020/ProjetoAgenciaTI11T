@@ -36,6 +36,7 @@ namespace ProjetoAgenciaTI11T.View
             this.tbxNome = new System.Windows.Forms.TextBox();
             this.tbxEmail = new System.Windows.Forms.TextBox();
             this.tbxSenha = new System.Windows.Forms.TextBox();
+            this.btnSalvar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -96,11 +97,21 @@ namespace ProjetoAgenciaTI11T.View
             this.tbxSenha.Size = new System.Drawing.Size(288, 23);
             this.tbxSenha.TabIndex = 6;
             // 
+            // btnSalvar
+            // 
+            this.btnSalvar.Location = new System.Drawing.Point(252, 275);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(75, 23);
+            this.btnSalvar.TabIndex = 7;
+            this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.UseVisualStyleBackColor = true;
+            // 
             // TelaCadastroFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(551, 326);
+            this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.tbxSenha);
             this.Controls.Add(this.tbxEmail);
             this.Controls.Add(this.tbxNome);
@@ -124,5 +135,6 @@ namespace ProjetoAgenciaTI11T.View
         private System.Windows.Forms.TextBox tbxNome;
         private System.Windows.Forms.TextBox tbxEmail;
         private System.Windows.Forms.TextBox tbxSenha;
+        private System.Windows.Forms.Button btnSalvar;
     }
 }
