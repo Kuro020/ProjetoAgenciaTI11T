@@ -38,14 +38,15 @@ namespace ProjetoAgenciaTI11T.View
             this.label7 = new System.Windows.Forms.Label();
             this.dtpIda = new System.Windows.Forms.DateTimePicker();
             this.dtpVolta = new System.Windows.Forms.DateTimePicker();
-            this.ptbImagem = new System.Windows.Forms.PictureBox();
+            this.pbxImagem = new System.Windows.Forms.PictureBox();
             this.tbxValor = new System.Windows.Forms.TextBox();
             this.rtbDescricao = new System.Windows.Forms.RichTextBox();
             this.btnImagem = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.cmbOrigem = new System.Windows.Forms.ComboBox();
             this.cmbDestino = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbImagem)).BeginInit();
+            this.openFileDialogImagem = new System.Windows.Forms.OpenFileDialog();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxImagem)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -128,13 +129,13 @@ namespace ProjetoAgenciaTI11T.View
             this.dtpVolta.Size = new System.Drawing.Size(200, 23);
             this.dtpVolta.TabIndex = 8;
             // 
-            // ptbImagem
+            // pbxImagem
             // 
-            this.ptbImagem.Location = new System.Drawing.Point(355, 254);
-            this.ptbImagem.Name = "ptbImagem";
-            this.ptbImagem.Size = new System.Drawing.Size(239, 144);
-            this.ptbImagem.TabIndex = 9;
-            this.ptbImagem.TabStop = false;
+            this.pbxImagem.Location = new System.Drawing.Point(355, 254);
+            this.pbxImagem.Name = "pbxImagem";
+            this.pbxImagem.Size = new System.Drawing.Size(239, 144);
+            this.pbxImagem.TabIndex = 9;
+            this.pbxImagem.TabStop = false;
             // 
             // tbxValor
             // 
@@ -159,6 +160,7 @@ namespace ProjetoAgenciaTI11T.View
             this.btnImagem.TabIndex = 14;
             this.btnImagem.Text = "Buscar Imagem";
             this.btnImagem.UseVisualStyleBackColor = true;
+            this.btnImagem.Click += new System.EventHandler(this.btnImagem_Click);
             // 
             // btnSalvar
             // 
@@ -168,6 +170,7 @@ namespace ProjetoAgenciaTI11T.View
             this.btnSalvar.TabIndex = 15;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // cmbOrigem
             // 
@@ -185,6 +188,10 @@ namespace ProjetoAgenciaTI11T.View
             this.cmbDestino.Size = new System.Drawing.Size(199, 23);
             this.cmbDestino.TabIndex = 17;
             // 
+            // openFileDialogImagem
+            // 
+            this.openFileDialogImagem.FileName = "openFileDialogImagem";
+            // 
             // TelaCadastrarPacote
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -197,7 +204,7 @@ namespace ProjetoAgenciaTI11T.View
             this.Controls.Add(this.btnImagem);
             this.Controls.Add(this.rtbDescricao);
             this.Controls.Add(this.tbxValor);
-            this.Controls.Add(this.ptbImagem);
+            this.Controls.Add(this.pbxImagem);
             this.Controls.Add(this.dtpVolta);
             this.Controls.Add(this.dtpIda);
             this.Controls.Add(this.label7);
@@ -207,9 +214,11 @@ namespace ProjetoAgenciaTI11T.View
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.KeyPreview = true;
             this.Name = "TelaCadastrarPacote";
             this.Text = "TelaCadastrarPacote";
-            ((System.ComponentModel.ISupportInitialize)(this.ptbImagem)).EndInit();
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TelaCadastrarPacote_KeyPress);
+            ((System.ComponentModel.ISupportInitialize)(this.pbxImagem)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -226,12 +235,13 @@ namespace ProjetoAgenciaTI11T.View
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DateTimePicker dtpIda;
         private System.Windows.Forms.DateTimePicker dtpVolta;
-        private System.Windows.Forms.PictureBox ptbImagem;
+        private System.Windows.Forms.PictureBox pbxImagem;
         private System.Windows.Forms.TextBox tbxValor;
         private System.Windows.Forms.RichTextBox rtbDescricao;
         private System.Windows.Forms.Button btnImagem;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.ComboBox cmbOrigem;
         private System.Windows.Forms.ComboBox cmbDestino;
+        private System.Windows.Forms.OpenFileDialog openFileDialogImagem;
     }
 }

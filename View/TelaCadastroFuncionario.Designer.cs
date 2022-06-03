@@ -105,6 +105,8 @@ namespace ProjetoAgenciaTI11T.View
             this.btnSalvar.TabIndex = 7;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
+            this.btnSalvar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.btnSalvar_KeyPress);
             // 
             // TelaCadastroFuncionario
             // 
@@ -119,6 +121,7 @@ namespace ProjetoAgenciaTI11T.View
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.KeyPreview = true;
             this.Name = "TelaCadastroFuncionario";
             this.Text = "TelaCadastroFuncionario";
             this.ResumeLayout(false);

@@ -149,8 +149,10 @@ namespace ProjetoAgenciaTI11T.View
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.KeyPreview = true;
             this.Name = "TelaCadastrarCliente";
             this.Text = "Sistema de Cadastro de Cliente";
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TelaCadastrarCliente_KeyPress);
             ((System.ComponentModel.ISupportInitialize)(this.pbxImagem)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
