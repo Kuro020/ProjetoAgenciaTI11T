@@ -45,5 +45,11 @@ namespace ProjetoAgenciaTI11T.View
             TelaCadastrarVendas vendas = new TelaCadastrarVendas();
             vendas.Show();
         }
+
+        private void pesquisarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TelaPesquisarCliente pesquisarCliente = new TelaPesquisarCliente();
+            pesquisarCliente.Show();
+        }
     }
 }

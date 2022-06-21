@@ -53,5 +53,149 @@ namespace ProjetoAgenciaTI11T.Controller
 
             }
         }
+        public void pesquisaCodPac()
+        {
+            SqlConnection cn = new SqlConnection(ConexaoBanco.conectar());
+            SqlCommand cmd = new SqlCommand("pPesquisaCodPac", cn);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            try
+            {
+                cmd.Parameters.AddWithValue("@codPac", Pacotes.CodigoPac);
+                cn.Open();
+
+                var arrayDados = cmd.ExecuteReader();
+
+                if (arrayDados.Read())
+                {
+                    Pacotes.CodigoPac = Convert.ToInt32(arrayDados["codPac"]);
+                    Pacotes.ValorPac = Convert.ToInt32(arrayDados["valorPac"]);
+                    Pacotes.OrigemPac = arrayDados["origemPac"].ToString();
+                    Pacotes.DestinoPac = arrayDados["desinoPac"].ToString();
+                    Pacotes.DataidaPac = Convert.ToString(arrayDados["dataidaPac"]);
+                    Pacotes.DatavoltaPac = Convert.ToString(arrayDados["datavoltaPac"]);
+                    Pacotes.DescricaoPac = arrayDados["descPac"].ToString();
+                    Pacotes.ImagePac = (System.Array)arrayDados["imgPac"];
+                    Pacotes.Retorno = "Sim";
+                }
+
+                else
+                {
+                    MessageBox.Show("Código não localizado", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    Pacotes.Retorno = "Não";
+                }
+            }
+
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public void deletarPac()
+        {
+            SqlConnection cn = new SqlConnection(ConexaoBanco.conectar());
+            SqlCommand cmd = new SqlCommand("pDeletarPac", cn);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            try
+            {
+                cmd.Parameters.AddWithValue("@codPac", Pacotes.CodigoPac);
+                cn.Open();
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Pacote excluido com sucesso", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "O pacote não pôde ser excluido.");
+            }
+
+            finally
+            {
+                if (cn.State != ConnectionState.Closed)
+                {
+                    cn.Close();
+                }
+            }
+        }
+
+        public void alterarPac()
+        {
+            SqlConnection cn = new SqlConnection(ConexaoBanco.conectar());
+            SqlCommand cmd = new SqlCommand("pAlterarPac", cn);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            try
+            {
+                cmd.Parameters.AddWithValue("@valorPac", Pacotes.ValorPac);
+                cmd.Parameters.AddWithValue("@origemPac", Pacotes.OrigemPac);
+                cmd.Parameters.AddWithValue("@destinoPac", Pacotes.DestinoPac);
+                cmd.Parameters.AddWithValue("@dataPacIda", Pacotes.DataidaPac);
+                cmd.Parameters.AddWithValue("@dataPacVolta", Pacotes.DatavoltaPac);
+                cmd.Parameters.AddWithValue("@descPac", Pacotes.DescricaoPac);
+                cmd.Parameters.AddWithValue("@imgPac", Pacotes.ImagePac);
+                cn.Open();
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Pacote alterado com sucesso", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "O pacote não foi alterado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            finally
+            {
+                if (cn.State != ConnectionState.Closed)
+                {
+                    cn.Close();
+                }
+            }
+        }
+
+        public static BindingSource pesquisaOrigemPac()
+        {
+            SqlConnection cn = new SqlConnection(ConexaoBanco.conectar());
+            SqlCommand cmd = new SqlCommand("pPesquisaOrigemPac", cn);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("@origemPac", Pacotes.OrigemPac);
+            cn.Open();
+            cmd.ExecuteNonQuery();
+
+            SqlDataAdapter sqlData = new SqlDataAdapter(cmd);
+
+            DataTable table = new DataTable();
+
+            sqlData.Fill(table);
+
+            BindingSource dados = new BindingSource();
+            dados.DataSource = table;
+
+            return dados;
+        }
+
+        public static BindingSource pesquisaDestinoPac()
+        {
+            SqlConnection cn = new SqlConnection(ConexaoBanco.conectar());
+            SqlCommand cmd = new SqlCommand("pPesquisaDestinoPac", cn);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("@destinoPac", Pacotes.DestinoPac);
+            cn.Open();
+            cmd.ExecuteNonQuery();
+
+            SqlDataAdapter sqlData = new SqlDataAdapter(cmd);
+
+            DataTable table = new DataTable();
+
+            sqlData.Fill(table);
+
+            BindingSource dados = new BindingSource();
+            dados.DataSource = table;
+
+            return dados;
+        }
     }
 }

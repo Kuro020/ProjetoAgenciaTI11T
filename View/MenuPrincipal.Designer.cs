@@ -92,6 +92,7 @@ namespace ProjetoAgenciaTI11T.View
             this.pesquisarToolStripMenuItem.Name = "pesquisarToolStripMenuItem";
             this.pesquisarToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.pesquisarToolStripMenuItem.Text = "&Pesquisar";
+            this.pesquisarToolStripMenuItem.Click += new System.EventHandler(this.pesquisarToolStripMenuItem_Click);
             // 
             // funcionárioToolStripMenuItem
             // 
@@ -105,7 +106,7 @@ namespace ProjetoAgenciaTI11T.View
             // cadastrarToolStripMenuItem1
             // 
             this.cadastrarToolStripMenuItem1.Name = "cadastrarToolStripMenuItem1";
-            this.cadastrarToolStripMenuItem1.Size = new System.Drawing.Size(180, 26);
+            this.cadastrarToolStripMenuItem1.Size = new System.Drawing.Size(149, 26);
             this.cadastrarToolStripMenuItem1.Text = "&Cadastrar";
             this.cadastrarToolStripMenuItem1.Click += new System.EventHandler(this.cadastrarToolStripMenuItem1_Click);
             // 
@@ -127,7 +128,7 @@ namespace ProjetoAgenciaTI11T.View
             // cadastrarToolStripMenuItem2
             // 
             this.cadastrarToolStripMenuItem2.Name = "cadastrarToolStripMenuItem2";
-            this.cadastrarToolStripMenuItem2.Size = new System.Drawing.Size(180, 26);
+            this.cadastrarToolStripMenuItem2.Size = new System.Drawing.Size(149, 26);
             this.cadastrarToolStripMenuItem2.Text = "&Cadastrar";
             this.cadastrarToolStripMenuItem2.Click += new System.EventHandler(this.cadastrarToolStripMenuItem2_Click);
             // 
@@ -149,7 +150,7 @@ namespace ProjetoAgenciaTI11T.View
             // registrarToolStripMenuItem
             // 
             this.registrarToolStripMenuItem.Name = "registrarToolStripMenuItem";
-            this.registrarToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.registrarToolStripMenuItem.Size = new System.Drawing.Size(148, 26);
             this.registrarToolStripMenuItem.Text = "&Registrar";
             this.registrarToolStripMenuItem.Click += new System.EventHandler(this.registrarToolStripMenuItem_Click);
             // 
