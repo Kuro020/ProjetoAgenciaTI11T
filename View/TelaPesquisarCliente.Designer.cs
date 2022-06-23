@@ -30,15 +30,7 @@ namespace ProjetoAgenciaTI11T.View
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.btnNome = new System.Windows.Forms.Button();
-            this.tbxNomeCli = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.btnCod = new System.Windows.Forms.Button();
-            this.tbxCod = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.btnDeletar = new System.Windows.Forms.Button();
             this.btnAlterar = new System.Windows.Forms.Button();
             this.btnImagem = new System.Windows.Forms.Button();
@@ -46,18 +38,26 @@ namespace ProjetoAgenciaTI11T.View
             this.tbxSenha = new System.Windows.Forms.TextBox();
             this.tbxEmail = new System.Windows.Forms.TextBox();
             this.tbxNome = new System.Windows.Forms.TextBox();
+            this.tbxCod = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.btnCod = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.dataGridViewCliente = new System.Windows.Forms.DataGridView();
             this.Código = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Foto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.btnNome = new System.Windows.Forms.Button();
+            this.tbxNomeCli = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxImagem)).BeginInit();
+            this.tabControl1.SuspendLayout();
+            this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCliente)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,62 +65,11 @@ namespace ProjetoAgenciaTI11T.View
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(199, 36);
+            this.label1.Location = new System.Drawing.Point(199, 22);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(209, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "Pesquisar Cliente";
-            // 
-            // tabControl1
-            // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(12, 71);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(591, 367);
-            this.tabControl1.TabIndex = 1;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.Controls.Add(this.dataGridViewCliente);
-            this.tabPage1.Controls.Add(this.btnNome);
-            this.tabPage1.Controls.Add(this.tbxNomeCli);
-            this.tabPage1.Controls.Add(this.label2);
-            this.tabPage1.Location = new System.Drawing.Point(4, 24);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(583, 339);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Pesquisar por nome";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // btnNome
-            // 
-            this.btnNome.Location = new System.Drawing.Point(520, 36);
-            this.btnNome.Name = "btnNome";
-            this.btnNome.Size = new System.Drawing.Size(57, 23);
-            this.btnNome.TabIndex = 2;
-            this.btnNome.Text = "Buscar";
-            this.btnNome.UseVisualStyleBackColor = true;
-            // 
-            // tbxNomeCli
-            // 
-            this.tbxNomeCli.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbxNomeCli.Location = new System.Drawing.Point(194, 32);
-            this.tbxNomeCli.Name = "tbxNomeCli";
-            this.tbxNomeCli.Size = new System.Drawing.Size(320, 29);
-            this.tbxNomeCli.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(6, 36);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(182, 21);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Digite o nome do cliente:";
             // 
             // tabPage2
             // 
@@ -131,11 +80,11 @@ namespace ProjetoAgenciaTI11T.View
             this.tabPage2.Controls.Add(this.tbxSenha);
             this.tabPage2.Controls.Add(this.tbxEmail);
             this.tabPage2.Controls.Add(this.tbxNome);
+            this.tabPage2.Controls.Add(this.tbxCod);
             this.tabPage2.Controls.Add(this.label6);
             this.tabPage2.Controls.Add(this.label5);
             this.tabPage2.Controls.Add(this.label4);
             this.tabPage2.Controls.Add(this.btnCod);
-            this.tabPage2.Controls.Add(this.tbxCod);
             this.tabPage2.Controls.Add(this.label3);
             this.tabPage2.Location = new System.Drawing.Point(4, 24);
             this.tabPage2.Name = "tabPage2";
@@ -144,34 +93,6 @@ namespace ProjetoAgenciaTI11T.View
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Pesquisar por código";
             this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // btnCod
-            // 
-            this.btnCod.Location = new System.Drawing.Point(520, 36);
-            this.btnCod.Name = "btnCod";
-            this.btnCod.Size = new System.Drawing.Size(57, 23);
-            this.btnCod.TabIndex = 5;
-            this.btnCod.Text = "Buscar";
-            this.btnCod.UseVisualStyleBackColor = true;
-            this.btnCod.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // tbxCod
-            // 
-            this.tbxCod.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbxCod.Location = new System.Drawing.Point(194, 32);
-            this.tbxCod.Name = "tbxCod";
-            this.tbxCod.Size = new System.Drawing.Size(320, 29);
-            this.tbxCod.TabIndex = 4;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(6, 36);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(184, 21);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Digite o nome do código:";
             // 
             // btnDeletar
             // 
@@ -234,6 +155,14 @@ namespace ProjetoAgenciaTI11T.View
             this.tbxNome.Size = new System.Drawing.Size(315, 29);
             this.tbxNome.TabIndex = 16;
             // 
+            // tbxCod
+            // 
+            this.tbxCod.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tbxCod.Location = new System.Drawing.Point(194, 32);
+            this.tbxCod.Name = "tbxCod";
+            this.tbxCod.Size = new System.Drawing.Size(320, 29);
+            this.tbxCod.TabIndex = 4;
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -264,6 +193,50 @@ namespace ProjetoAgenciaTI11T.View
             this.label4.TabIndex = 13;
             this.label4.Text = "Nome:";
             // 
+            // btnCod
+            // 
+            this.btnCod.Location = new System.Drawing.Point(520, 36);
+            this.btnCod.Name = "btnCod";
+            this.btnCod.Size = new System.Drawing.Size(57, 23);
+            this.btnCod.TabIndex = 5;
+            this.btnCod.Text = "Buscar";
+            this.btnCod.UseVisualStyleBackColor = true;
+            this.btnCod.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(6, 36);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(184, 21);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Digite o nome do código:";
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Location = new System.Drawing.Point(12, 71);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(591, 367);
+            this.tabControl1.TabIndex = 1;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.dataGridViewCliente);
+            this.tabPage3.Controls.Add(this.btnNome);
+            this.tabPage3.Controls.Add(this.tbxNomeCli);
+            this.tabPage3.Controls.Add(this.label2);
+            this.tabPage3.Location = new System.Drawing.Point(4, 24);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(583, 339);
+            this.tabPage3.TabIndex = 3;
+            this.tabPage3.Text = "Pesquisar por nome";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
             // dataGridViewCliente
             // 
             this.dataGridViewCliente.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -277,7 +250,7 @@ namespace ProjetoAgenciaTI11T.View
             this.dataGridViewCliente.Name = "dataGridViewCliente";
             this.dataGridViewCliente.RowHeadersVisible = false;
             this.dataGridViewCliente.RowTemplate.Height = 25;
-            this.dataGridViewCliente.Size = new System.Drawing.Size(571, 248);
+            this.dataGridViewCliente.Size = new System.Drawing.Size(745, 248);
             this.dataGridViewCliente.TabIndex = 3;
             // 
             // Código
@@ -305,6 +278,33 @@ namespace ProjetoAgenciaTI11T.View
             this.Foto.HeaderText = "Foto";
             this.Foto.Name = "Foto";
             // 
+            // btnNome
+            // 
+            this.btnNome.Location = new System.Drawing.Point(685, 36);
+            this.btnNome.Name = "btnNome";
+            this.btnNome.Size = new System.Drawing.Size(57, 23);
+            this.btnNome.TabIndex = 2;
+            this.btnNome.Text = "Buscar";
+            this.btnNome.UseVisualStyleBackColor = true;
+            // 
+            // tbxNomeCli
+            // 
+            this.tbxNomeCli.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tbxNomeCli.Location = new System.Drawing.Point(194, 32);
+            this.tbxNomeCli.Name = "tbxNomeCli";
+            this.tbxNomeCli.Size = new System.Drawing.Size(469, 29);
+            this.tbxNomeCli.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(12, 42);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(182, 21);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Digite o nome do cliente:";
+            // 
             // TelaPesquisarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -316,12 +316,12 @@ namespace ProjetoAgenciaTI11T.View
             this.Name = "TelaPesquisarCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sistema Gerenciador de Viagens";
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxImagem)).EndInit();
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCliente)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -331,15 +331,7 @@ namespace ProjetoAgenciaTI11T.View
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TextBox tbxNomeCli;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnNome;
-        private System.Windows.Forms.Button btnCod;
-        private System.Windows.Forms.TextBox tbxCod;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnDeletar;
         private System.Windows.Forms.Button btnAlterar;
         private System.Windows.Forms.Button btnImagem;
@@ -347,13 +339,21 @@ namespace ProjetoAgenciaTI11T.View
         private System.Windows.Forms.TextBox tbxSenha;
         private System.Windows.Forms.TextBox tbxEmail;
         private System.Windows.Forms.TextBox tbxNome;
+        private System.Windows.Forms.TextBox tbxCod;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnCod;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.DataGridView dataGridViewCliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn Código;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
         private System.Windows.Forms.DataGridViewTextBoxColumn Foto;
+        private System.Windows.Forms.Button btnNome;
+        private System.Windows.Forms.TextBox tbxNomeCli;
+        private System.Windows.Forms.Label label2;
     }
 }

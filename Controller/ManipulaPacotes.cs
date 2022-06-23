@@ -61,21 +61,21 @@ namespace ProjetoAgenciaTI11T.Controller
 
             try
             {
-                cmd.Parameters.AddWithValue("@codPac", Pacotes.CodigoPac);
+                cmd.Parameters.AddWithValue("@codigoPac", Pacotes.CodigoPac);
                 cn.Open();
 
                 var arrayDados = cmd.ExecuteReader();
 
                 if (arrayDados.Read())
                 {
-                    Pacotes.CodigoPac = Convert.ToInt32(arrayDados["codPac"]);
+                    Pacotes.CodigoPac = Convert.ToInt32(arrayDados["codigoPac"]);
                     Pacotes.ValorPac = Convert.ToInt32(arrayDados["valorPac"]);
                     Pacotes.OrigemPac = arrayDados["origemPac"].ToString();
-                    Pacotes.DestinoPac = arrayDados["desinoPac"].ToString();
+                    Pacotes.DestinoPac = arrayDados["destinoPac"].ToString();
                     Pacotes.DataidaPac = Convert.ToString(arrayDados["dataidaPac"]);
                     Pacotes.DatavoltaPac = Convert.ToString(arrayDados["datavoltaPac"]);
-                    Pacotes.DescricaoPac = arrayDados["descPac"].ToString();
-                    Pacotes.ImagePac = (System.Array)arrayDados["imgPac"];
+                    Pacotes.DescricaoPac = arrayDados["descricaoPac"].ToString();
+                    Pacotes.ImagePac = (System.Array)arrayDados["imagemPac"];
                     Pacotes.Retorno = "Sim";
                 }
 
