@@ -95,12 +95,12 @@ namespace ProjetoAgenciaTI11T.Controller
         public void deletarPac()
         {
             SqlConnection cn = new SqlConnection(ConexaoBanco.conectar());
-            SqlCommand cmd = new SqlCommand("pDeletarPac", cn);
+            SqlCommand cmd = new SqlCommand("pDeletarPacote", cn);
             cmd.CommandType = CommandType.StoredProcedure;
 
             try
             {
-                cmd.Parameters.AddWithValue("@codPac", Pacotes.CodigoPac);
+                cmd.Parameters.AddWithValue("@codigoPac", Pacotes.CodigoPac);
                 cn.Open();
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Pacote excluido com sucesso", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -123,18 +123,19 @@ namespace ProjetoAgenciaTI11T.Controller
         public void alterarPac()
         {
             SqlConnection cn = new SqlConnection(ConexaoBanco.conectar());
-            SqlCommand cmd = new SqlCommand("pAlterarPac", cn);
+            SqlCommand cmd = new SqlCommand("pAlterarPacotes", cn);
             cmd.CommandType = CommandType.StoredProcedure;
 
             try
             {
+                cmd.Parameters.AddWithValue("@codigoPac", Pacotes.CodigoPac);
                 cmd.Parameters.AddWithValue("@valorPac", Pacotes.ValorPac);
                 cmd.Parameters.AddWithValue("@origemPac", Pacotes.OrigemPac);
                 cmd.Parameters.AddWithValue("@destinoPac", Pacotes.DestinoPac);
-                cmd.Parameters.AddWithValue("@dataPacIda", Pacotes.DataidaPac);
-                cmd.Parameters.AddWithValue("@dataPacVolta", Pacotes.DatavoltaPac);
-                cmd.Parameters.AddWithValue("@descPac", Pacotes.DescricaoPac);
-                cmd.Parameters.AddWithValue("@imgPac", Pacotes.ImagePac);
+                cmd.Parameters.AddWithValue("@dataidaPac", Pacotes.DataidaPac);
+                cmd.Parameters.AddWithValue("@datavoltaPac", Pacotes.DatavoltaPac);
+                cmd.Parameters.AddWithValue("@descricaoPac", Pacotes.DescricaoPac);
+                cmd.Parameters.AddWithValue("@imgagemPac", Pacotes.ImagePac);
                 cn.Open();
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Pacote alterado com sucesso", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);

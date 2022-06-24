@@ -54,6 +54,7 @@ namespace ProjetoAgenciaTI11T.View
             this.btnNome = new System.Windows.Forms.Button();
             this.tbxNomeCli = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.openFileDialogImagem = new System.Windows.Forms.OpenFileDialog();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxImagem)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -102,6 +103,7 @@ namespace ProjetoAgenciaTI11T.View
             this.btnDeletar.TabIndex = 22;
             this.btnDeletar.Text = "Deletar";
             this.btnDeletar.UseVisualStyleBackColor = true;
+            this.btnDeletar.Click += new System.EventHandler(this.btnDeletar_Click);
             // 
             // btnAlterar
             // 
@@ -111,6 +113,7 @@ namespace ProjetoAgenciaTI11T.View
             this.btnAlterar.TabIndex = 21;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // btnImagem
             // 
@@ -120,6 +123,7 @@ namespace ProjetoAgenciaTI11T.View
             this.btnImagem.TabIndex = 20;
             this.btnImagem.Text = "Buscar Imagem";
             this.btnImagem.UseVisualStyleBackColor = true;
+            this.btnImagem.Click += new System.EventHandler(this.btnImagem_Click);
             // 
             // pbxImagem
             // 
@@ -305,6 +309,10 @@ namespace ProjetoAgenciaTI11T.View
             this.label2.TabIndex = 0;
             this.label2.Text = "Digite o nome do cliente:";
             // 
+            // openFileDialogImagem
+            // 
+            this.openFileDialogImagem.FileName = "openFileDialogImagem";
+            // 
             // TelaPesquisarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -355,5 +363,6 @@ namespace ProjetoAgenciaTI11T.View
         private System.Windows.Forms.Button btnNome;
         private System.Windows.Forms.TextBox tbxNomeCli;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.OpenFileDialog openFileDialogImagem;
     }
 }

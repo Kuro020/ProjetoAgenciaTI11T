@@ -189,6 +189,7 @@ namespace ProjetoAgenciaTI11T.View
             this.btnDeletar.TabIndex = 22;
             this.btnDeletar.Text = "Deletar";
             this.btnDeletar.UseVisualStyleBackColor = true;
+            this.btnDeletar.Click += new System.EventHandler(this.btnDeletar_Click);
             // 
             // btnAlterar
             // 
@@ -198,6 +199,7 @@ namespace ProjetoAgenciaTI11T.View
             this.btnAlterar.TabIndex = 21;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // tbxSenha
             // 
