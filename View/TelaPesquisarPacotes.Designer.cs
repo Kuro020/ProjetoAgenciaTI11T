@@ -59,6 +59,7 @@ namespace ProjetoAgenciaTI11T.View
             this.btnCod = new System.Windows.Forms.Button();
             this.tbxCod = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.openFileDialogImagem = new System.Windows.Forms.OpenFileDialog();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCliente)).BeginInit();
@@ -270,6 +271,7 @@ namespace ProjetoAgenciaTI11T.View
             this.btnImagem.TabIndex = 20;
             this.btnImagem.Text = "Buscar Imagem";
             this.btnImagem.UseVisualStyleBackColor = true;
+            this.btnImagem.Click += new System.EventHandler(this.btnImagem_Click);
             // 
             // pbxImagem
             // 
@@ -363,6 +365,10 @@ namespace ProjetoAgenciaTI11T.View
             this.label3.TabIndex = 3;
             this.label3.Text = "Digite o nome do código:";
             // 
+            // openFileDialogImagem
+            // 
+            this.openFileDialogImagem.FileName = "openFileDialog1";
+            // 
             // TelaPesquisarPacotes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -416,5 +422,6 @@ namespace ProjetoAgenciaTI11T.View
         private System.Windows.Forms.DateTimePicker dtpVolta;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.RichTextBox rtbDescricao;
+        private System.Windows.Forms.OpenFileDialog openFileDialogImagem;
     }
 }

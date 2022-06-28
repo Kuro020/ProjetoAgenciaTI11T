@@ -32,8 +32,8 @@ namespace ProjetoAgenciaTI11T.View
                 Pacotes.ValorPac = Convert.ToDouble(tbxValor.Text);
                 Pacotes.OrigemPac = cmbOrigem.Text;
                 Pacotes.DestinoPac = cmbDestino.Text;
-                Pacotes.DataidaPac = dtpIda.Text;
-                Pacotes.DatavoltaPac = dtpVolta.Text;
+                Pacotes.DataidaPac = dtpIda.Value;
+                Pacotes.DatavoltaPac = dtpVolta.Value;
                 Pacotes.DescricaoPac = rtbDescricao.Text;
 
                 MemoryStream memoryStream = new MemoryStream();

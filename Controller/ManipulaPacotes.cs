@@ -72,10 +72,10 @@ namespace ProjetoAgenciaTI11T.Controller
                     Pacotes.ValorPac = Convert.ToInt32(arrayDados["valorPac"]);
                     Pacotes.OrigemPac = arrayDados["origemPac"].ToString();
                     Pacotes.DestinoPac = arrayDados["destinoPac"].ToString();
-                    Pacotes.DataidaPac = Convert.ToString(arrayDados["dataidaPac"]);
-                    Pacotes.DatavoltaPac = Convert.ToString(arrayDados["datavoltaPac"]);
+                    Pacotes.DataidaPac = Convert.ToDateTime(arrayDados["dataidaPac"]);
+                    Pacotes.DatavoltaPac = Convert.ToDateTime(arrayDados["datavoltaPac"]);
                     Pacotes.DescricaoPac = arrayDados["descricaoPac"].ToString();
-                    Pacotes.ImagePac = (System.Array)arrayDados["imagemPac"];
+                    Pacotes.ImagePac = (Array)arrayDados["imagemPac"];
                     Pacotes.Retorno = "Sim";
                 }
 
@@ -135,7 +135,7 @@ namespace ProjetoAgenciaTI11T.Controller
                 cmd.Parameters.AddWithValue("@dataidaPac", Pacotes.DataidaPac);
                 cmd.Parameters.AddWithValue("@datavoltaPac", Pacotes.DatavoltaPac);
                 cmd.Parameters.AddWithValue("@descricaoPac", Pacotes.DescricaoPac);
-                cmd.Parameters.AddWithValue("@imgagemPac", Pacotes.ImagePac);
+                cmd.Parameters.AddWithValue("@imagemPac", Pacotes.ImagePac);
                 cn.Open();
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Pacote alterado com sucesso", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
