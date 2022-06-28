@@ -41,6 +41,11 @@ namespace ProjetoAgenciaTI11T.View
             this.tbxNomeCli = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.rtbDescricao = new System.Windows.Forms.RichTextBox();
+            this.dtpVolta = new System.Windows.Forms.DateTimePicker();
+            this.label8 = new System.Windows.Forms.Label();
+            this.dtpIda = new System.Windows.Forms.DateTimePicker();
+            this.label7 = new System.Windows.Forms.Label();
             this.btnDeletar = new System.Windows.Forms.Button();
             this.btnAlterar = new System.Windows.Forms.Button();
             this.btnImagem = new System.Windows.Forms.Button();
@@ -54,11 +59,6 @@ namespace ProjetoAgenciaTI11T.View
             this.btnCod = new System.Windows.Forms.Button();
             this.tbxCod = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.dtpIda = new System.Windows.Forms.DateTimePicker();
-            this.dtpVolta = new System.Windows.Forms.DateTimePicker();
-            this.label8 = new System.Windows.Forms.Label();
-            this.rtbDescricao = new System.Windows.Forms.RichTextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCliente)).BeginInit();
@@ -196,6 +196,52 @@ namespace ProjetoAgenciaTI11T.View
             this.tabPage2.Text = "Pesquisar por código";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // rtbDescricao
+            // 
+            this.rtbDescricao.Location = new System.Drawing.Point(366, 91);
+            this.rtbDescricao.Name = "rtbDescricao";
+            this.rtbDescricao.Size = new System.Drawing.Size(211, 176);
+            this.rtbDescricao.TabIndex = 27;
+            this.rtbDescricao.Text = "";
+            // 
+            // dtpVolta
+            // 
+            this.dtpVolta.CalendarFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.dtpVolta.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.dtpVolta.Location = new System.Drawing.Point(89, 238);
+            this.dtpVolta.Name = "dtpVolta";
+            this.dtpVolta.Size = new System.Drawing.Size(200, 29);
+            this.dtpVolta.TabIndex = 26;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label8.Location = new System.Drawing.Point(35, 244);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(48, 21);
+            this.label8.TabIndex = 25;
+            this.label8.Text = "Volta:";
+            // 
+            // dtpIda
+            // 
+            this.dtpIda.CalendarFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.dtpIda.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.dtpIda.Location = new System.Drawing.Point(89, 203);
+            this.dtpIda.Name = "dtpIda";
+            this.dtpIda.Size = new System.Drawing.Size(200, 29);
+            this.dtpIda.TabIndex = 24;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label7.Location = new System.Drawing.Point(49, 209);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(34, 21);
+            this.label7.TabIndex = 23;
+            this.label7.Text = "Ida:";
+            // 
             // btnDeletar
             // 
             this.btnDeletar.Location = new System.Drawing.Point(397, 301);
@@ -204,6 +250,7 @@ namespace ProjetoAgenciaTI11T.View
             this.btnDeletar.TabIndex = 22;
             this.btnDeletar.Text = "Deletar";
             this.btnDeletar.UseVisualStyleBackColor = true;
+            this.btnDeletar.Click += new System.EventHandler(this.btnDeletar_Click);
             // 
             // btnAlterar
             // 
@@ -213,6 +260,7 @@ namespace ProjetoAgenciaTI11T.View
             this.btnAlterar.TabIndex = 21;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // btnImagem
             // 
@@ -314,52 +362,6 @@ namespace ProjetoAgenciaTI11T.View
             this.label3.Size = new System.Drawing.Size(184, 21);
             this.label3.TabIndex = 3;
             this.label3.Text = "Digite o nome do código:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(49, 209);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(34, 21);
-            this.label7.TabIndex = 23;
-            this.label7.Text = "Ida:";
-            // 
-            // dtpIda
-            // 
-            this.dtpIda.CalendarFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.dtpIda.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.dtpIda.Location = new System.Drawing.Point(89, 203);
-            this.dtpIda.Name = "dtpIda";
-            this.dtpIda.Size = new System.Drawing.Size(200, 29);
-            this.dtpIda.TabIndex = 24;
-            // 
-            // dtpVolta
-            // 
-            this.dtpVolta.CalendarFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.dtpVolta.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.dtpVolta.Location = new System.Drawing.Point(89, 238);
-            this.dtpVolta.Name = "dtpVolta";
-            this.dtpVolta.Size = new System.Drawing.Size(200, 29);
-            this.dtpVolta.TabIndex = 26;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(35, 244);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(48, 21);
-            this.label8.TabIndex = 25;
-            this.label8.Text = "Volta:";
-            // 
-            // rtbDescricao
-            // 
-            this.rtbDescricao.Location = new System.Drawing.Point(366, 91);
-            this.rtbDescricao.Name = "rtbDescricao";
-            this.rtbDescricao.Size = new System.Drawing.Size(211, 176);
-            this.rtbDescricao.TabIndex = 27;
-            this.rtbDescricao.Text = "";
             // 
             // TelaPesquisarPacotes
             // 
