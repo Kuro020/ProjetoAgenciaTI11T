@@ -46,6 +46,7 @@ namespace ProjetoAgenciaTI11T.View
             this.label3 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.btnBuscarNomeCli = new System.Windows.Forms.Button();
             this.dataGridViewCliente = new System.Windows.Forms.DataGridView();
             this.Código = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -229,6 +230,7 @@ namespace ProjetoAgenciaTI11T.View
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.btnBuscarNomeCli);
             this.tabPage3.Controls.Add(this.dataGridViewCliente);
             this.tabPage3.Controls.Add(this.btnNome);
             this.tabPage3.Controls.Add(this.tbxNomeCli);
@@ -240,6 +242,16 @@ namespace ProjetoAgenciaTI11T.View
             this.tabPage3.TabIndex = 3;
             this.tabPage3.Text = "Pesquisar por nome";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // btnBuscarNomeCli
+            // 
+            this.btnBuscarNomeCli.Location = new System.Drawing.Point(461, 42);
+            this.btnBuscarNomeCli.Name = "btnBuscarNomeCli";
+            this.btnBuscarNomeCli.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscarNomeCli.TabIndex = 4;
+            this.btnBuscarNomeCli.Text = "Buscar";
+            this.btnBuscarNomeCli.UseVisualStyleBackColor = true;
+            this.btnBuscarNomeCli.Click += new System.EventHandler(this.btnBuscarNomeCli_Click);
             // 
             // dataGridViewCliente
             // 
@@ -254,7 +266,7 @@ namespace ProjetoAgenciaTI11T.View
             this.dataGridViewCliente.Name = "dataGridViewCliente";
             this.dataGridViewCliente.RowHeadersVisible = false;
             this.dataGridViewCliente.RowTemplate.Height = 25;
-            this.dataGridViewCliente.Size = new System.Drawing.Size(745, 248);
+            this.dataGridViewCliente.Size = new System.Drawing.Size(565, 248);
             this.dataGridViewCliente.TabIndex = 3;
             // 
             // Código
@@ -294,9 +306,9 @@ namespace ProjetoAgenciaTI11T.View
             // tbxNomeCli
             // 
             this.tbxNomeCli.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbxNomeCli.Location = new System.Drawing.Point(194, 32);
+            this.tbxNomeCli.Location = new System.Drawing.Point(200, 39);
             this.tbxNomeCli.Name = "tbxNomeCli";
-            this.tbxNomeCli.Size = new System.Drawing.Size(469, 29);
+            this.tbxNomeCli.Size = new System.Drawing.Size(255, 29);
             this.tbxNomeCli.TabIndex = 1;
             // 
             // label2
@@ -364,5 +376,6 @@ namespace ProjetoAgenciaTI11T.View
         private System.Windows.Forms.TextBox tbxNomeCli;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.OpenFileDialog openFileDialogImagem;
+        private System.Windows.Forms.Button btnBuscarNomeCli;
     }
 }

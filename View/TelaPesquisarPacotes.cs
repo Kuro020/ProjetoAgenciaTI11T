@@ -178,5 +178,61 @@ namespace ProjetoAgenciaTI11T.View
                 pbxImagem.Image = Image.FromFile(openFileDialogImagem.FileName);
             }
         }
+
+        private void btnOrigem_Click(object sender, EventArgs e)
+        {
+            if (tbxOrigemPac.Text == "")
+            {
+                MessageBox.Show("Digite uma origem para a busca.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                return;
+            }
+
+            Pacotes.OrigemPac = tbxOrigem.Text;
+
+            dataGridViewPacote.DataSource = ManipulaPacotes.pesquisaOrigemPac();
+
+            dataGridViewPacote.Columns[0].Visible = false;
+            dataGridViewPacote.Columns[1].Visible = false;
+            dataGridViewPacote.Columns[2].Visible = false;
+            dataGridViewPacote.Columns[3].Visible = false;
+            dataGridViewPacote.Columns[4].Visible = false;
+            dataGridViewPacote.Columns[5].Visible = false;
+            dataGridViewPacote.Columns[6].HeaderCell.Value = "Código";
+            dataGridViewPacote.Columns[7].HeaderCell.Value = "Valor";
+            dataGridViewPacote.Columns[8].HeaderCell.Value = "Origem";
+            dataGridViewPacote.Columns[9].HeaderCell.Value = "Destino";
+            dataGridViewPacote.Columns[10].HeaderCell.Value = "Ida";
+            dataGridViewPacote.Columns[11].HeaderCell.Value = "Volta";
+            dataGridViewPacote.Columns[12].Visible = false;
+            dataGridViewPacote.Columns[13].Visible = false;
+        }
+
+        private void btnDestino_Click(object sender, EventArgs e)
+        {
+            if (tbxDestinoPac.Text == "")
+            {
+                MessageBox.Show("Digite um destino para a busca.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                return;
+            }
+
+            Pacotes.DestinoPac = tbxDestino.Text;
+
+            dataGridViewDestino.DataSource = ManipulaPacotes.pesquisaDestinoPac();
+
+            dataGridViewDestino.Columns[0].Visible = false;
+            dataGridViewDestino.Columns[1].Visible = false;
+            dataGridViewDestino.Columns[2].Visible = false;
+            dataGridViewDestino.Columns[3].Visible = false;
+            dataGridViewDestino.Columns[4].Visible = false;
+            dataGridViewDestino.Columns[5].Visible = false;
+            dataGridViewDestino.Columns[6].HeaderCell.Value = "Código";
+            dataGridViewDestino.Columns[7].HeaderCell.Value = "Valor";
+            dataGridViewDestino.Columns[8].HeaderCell.Value = "Origem";
+            dataGridViewDestino.Columns[9].HeaderCell.Value = "Destino";
+            dataGridViewDestino.Columns[10].HeaderCell.Value = "Ida";
+            dataGridViewDestino.Columns[11].HeaderCell.Value = "Volta";
+            dataGridViewDestino.Columns[12].Visible = false;
+            dataGridViewDestino.Columns[13].Visible = false;
+        }
     }
 }

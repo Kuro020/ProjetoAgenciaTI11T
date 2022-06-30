@@ -142,10 +142,10 @@ namespace ProjetoAgenciaTI11T.Controller
         public static BindingSource pesquisarNomeFuncionario()
         {
             SqlConnection cn = new SqlConnection(ConexaoBanco.conectar());
-            SqlCommand cmd = new SqlCommand("pPesquisarNomeFuncionario", cn);
+            SqlCommand cmd = new SqlCommand("pPesquisaNomeFuncionario", cn);
             cmd.CommandType = CommandType.StoredProcedure;
 
-            cmd.Parameters.AddWithValue("@nomeFuncionario", Funcionario.NomeFun);
+            cmd.Parameters.AddWithValue("@nomeFun", Funcionario.NomeFun);
             cn.Open();
             cmd.ExecuteNonQuery();
 

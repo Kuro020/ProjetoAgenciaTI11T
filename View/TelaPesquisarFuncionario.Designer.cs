@@ -33,10 +33,6 @@ namespace ProjetoAgenciaTI11T.View
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dataGridViewCliente = new System.Windows.Forms.DataGridView();
-            this.Código = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Foto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnNome = new System.Windows.Forms.Button();
             this.tbxNomeCli = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -52,6 +48,9 @@ namespace ProjetoAgenciaTI11T.View
             this.btnCod = new System.Windows.Forms.Button();
             this.tbxCod = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.Código = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCliente)).BeginInit();
@@ -99,39 +98,13 @@ namespace ProjetoAgenciaTI11T.View
             this.dataGridViewCliente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Código,
             this.Nome,
-            this.Email,
-            this.Foto});
+            this.Email});
             this.dataGridViewCliente.Location = new System.Drawing.Point(6, 85);
             this.dataGridViewCliente.Name = "dataGridViewCliente";
             this.dataGridViewCliente.RowHeadersVisible = false;
             this.dataGridViewCliente.RowTemplate.Height = 25;
             this.dataGridViewCliente.Size = new System.Drawing.Size(571, 248);
             this.dataGridViewCliente.TabIndex = 3;
-            // 
-            // Código
-            // 
-            this.Código.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Código.HeaderText = "Código";
-            this.Código.Name = "Código";
-            this.Código.Width = 60;
-            // 
-            // Nome
-            // 
-            this.Nome.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Nome.HeaderText = "Nome";
-            this.Nome.Name = "Nome";
-            // 
-            // Email
-            // 
-            this.Email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Email.HeaderText = "Email";
-            this.Email.Name = "Email";
-            // 
-            // Foto
-            // 
-            this.Foto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Foto.HeaderText = "Foto";
-            this.Foto.Name = "Foto";
             // 
             // btnNome
             // 
@@ -141,6 +114,7 @@ namespace ProjetoAgenciaTI11T.View
             this.btnNome.TabIndex = 2;
             this.btnNome.Text = "Buscar";
             this.btnNome.UseVisualStyleBackColor = true;
+            this.btnNome.Click += new System.EventHandler(this.btnNome_Click);
             // 
             // tbxNomeCli
             // 
@@ -283,6 +257,25 @@ namespace ProjetoAgenciaTI11T.View
             this.label3.TabIndex = 3;
             this.label3.Text = "Digite o nome do código:";
             // 
+            // Código
+            // 
+            this.Código.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Código.HeaderText = "Código";
+            this.Código.Name = "Código";
+            this.Código.Width = 60;
+            // 
+            // Nome
+            // 
+            this.Nome.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Nome.HeaderText = "Nome";
+            this.Nome.Name = "Nome";
+            // 
+            // Email
+            // 
+            this.Email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Email.HeaderText = "Email";
+            this.Email.Name = "Email";
+            // 
             // TelaPesquisarFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -309,10 +302,6 @@ namespace ProjetoAgenciaTI11T.View
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.DataGridView dataGridViewCliente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Código;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Foto;
         private System.Windows.Forms.Button btnNome;
         private System.Windows.Forms.TextBox tbxNomeCli;
         private System.Windows.Forms.Label label2;
@@ -328,5 +317,8 @@ namespace ProjetoAgenciaTI11T.View
         private System.Windows.Forms.Button btnCod;
         private System.Windows.Forms.TextBox tbxCod;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Código;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
     }
 }

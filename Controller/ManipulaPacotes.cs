@@ -158,7 +158,7 @@ namespace ProjetoAgenciaTI11T.Controller
         public static BindingSource pesquisaOrigemPac()
         {
             SqlConnection cn = new SqlConnection(ConexaoBanco.conectar());
-            SqlCommand cmd = new SqlCommand("pPesquisaOrigemPac", cn);
+            SqlCommand cmd = new SqlCommand("pPesquisaOrigemPacote", cn);
             cmd.CommandType = CommandType.StoredProcedure;
 
             cmd.Parameters.AddWithValue("@origemPac", Pacotes.OrigemPac);
@@ -180,7 +180,7 @@ namespace ProjetoAgenciaTI11T.Controller
         public static BindingSource pesquisaDestinoPac()
         {
             SqlConnection cn = new SqlConnection(ConexaoBanco.conectar());
-            SqlCommand cmd = new SqlCommand("pPesquisaDestinoPac", cn);
+            SqlCommand cmd = new SqlCommand("pPesquisaDestinoPacote", cn);
             cmd.CommandType = CommandType.StoredProcedure;
 
             cmd.Parameters.AddWithValue("@destinoPac", Pacotes.DestinoPac);

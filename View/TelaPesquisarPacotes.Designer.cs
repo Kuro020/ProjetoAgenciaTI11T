@@ -32,13 +32,15 @@ namespace ProjetoAgenciaTI11T.View
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.dataGridViewCliente = new System.Windows.Forms.DataGridView();
+            this.dataGridViewPacote = new System.Windows.Forms.DataGridView();
             this.Código = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Foto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnNome = new System.Windows.Forms.Button();
-            this.tbxNomeCli = new System.Windows.Forms.TextBox();
+            this.Valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Origem = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Destino = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ida = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Volta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnOrigem = new System.Windows.Forms.Button();
+            this.tbxOrigemPac = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.rtbDescricao = new System.Windows.Forms.RichTextBox();
@@ -59,12 +61,25 @@ namespace ProjetoAgenciaTI11T.View
             this.btnCod = new System.Windows.Forms.Button();
             this.tbxCod = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.openFileDialogImagem = new System.Windows.Forms.OpenFileDialog();
+            this.dataGridViewDestino = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnDestino = new System.Windows.Forms.Button();
+            this.tbxDestinoPac = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCliente)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPacote)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxImagem)).BeginInit();
+            this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDestino)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -81,6 +96,7 @@ namespace ProjetoAgenciaTI11T.View
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Location = new System.Drawing.Point(12, 66);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -89,33 +105,35 @@ namespace ProjetoAgenciaTI11T.View
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.dataGridViewCliente);
-            this.tabPage1.Controls.Add(this.btnNome);
-            this.tabPage1.Controls.Add(this.tbxNomeCli);
+            this.tabPage1.Controls.Add(this.dataGridViewPacote);
+            this.tabPage1.Controls.Add(this.btnOrigem);
+            this.tabPage1.Controls.Add(this.tbxOrigemPac);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Location = new System.Drawing.Point(4, 24);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(757, 339);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Pesquisar por nome";
+            this.tabPage1.Text = "Pesquisar por Origem";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // dataGridViewCliente
+            // dataGridViewPacote
             // 
-            this.dataGridViewCliente.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridViewCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewCliente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewPacote.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewPacote.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewPacote.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Código,
-            this.Nome,
-            this.Email,
-            this.Foto});
-            this.dataGridViewCliente.Location = new System.Drawing.Point(6, 85);
-            this.dataGridViewCliente.Name = "dataGridViewCliente";
-            this.dataGridViewCliente.RowHeadersVisible = false;
-            this.dataGridViewCliente.RowTemplate.Height = 25;
-            this.dataGridViewCliente.Size = new System.Drawing.Size(745, 248);
-            this.dataGridViewCliente.TabIndex = 3;
+            this.Valor,
+            this.Origem,
+            this.Destino,
+            this.Ida,
+            this.Volta});
+            this.dataGridViewPacote.Location = new System.Drawing.Point(6, 85);
+            this.dataGridViewPacote.Name = "dataGridViewPacote";
+            this.dataGridViewPacote.RowHeadersVisible = false;
+            this.dataGridViewPacote.RowTemplate.Height = 25;
+            this.dataGridViewPacote.Size = new System.Drawing.Size(745, 248);
+            this.dataGridViewPacote.TabIndex = 3;
             // 
             // Código
             // 
@@ -124,40 +142,48 @@ namespace ProjetoAgenciaTI11T.View
             this.Código.Name = "Código";
             this.Código.Width = 60;
             // 
-            // Nome
+            // Valor
             // 
-            this.Nome.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Nome.HeaderText = "Nome";
-            this.Nome.Name = "Nome";
+            this.Valor.HeaderText = "Valor";
+            this.Valor.Name = "Valor";
             // 
-            // Email
+            // Origem
             // 
-            this.Email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Email.HeaderText = "Email";
-            this.Email.Name = "Email";
+            this.Origem.HeaderText = "Origem";
+            this.Origem.Name = "Origem";
             // 
-            // Foto
+            // Destino
             // 
-            this.Foto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Foto.HeaderText = "Foto";
-            this.Foto.Name = "Foto";
+            this.Destino.HeaderText = "Destino";
+            this.Destino.Name = "Destino";
             // 
-            // btnNome
+            // Ida
             // 
-            this.btnNome.Location = new System.Drawing.Point(685, 36);
-            this.btnNome.Name = "btnNome";
-            this.btnNome.Size = new System.Drawing.Size(57, 23);
-            this.btnNome.TabIndex = 2;
-            this.btnNome.Text = "Buscar";
-            this.btnNome.UseVisualStyleBackColor = true;
+            this.Ida.HeaderText = "Ida";
+            this.Ida.Name = "Ida";
             // 
-            // tbxNomeCli
+            // Volta
             // 
-            this.tbxNomeCli.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbxNomeCli.Location = new System.Drawing.Point(194, 32);
-            this.tbxNomeCli.Name = "tbxNomeCli";
-            this.tbxNomeCli.Size = new System.Drawing.Size(469, 29);
-            this.tbxNomeCli.TabIndex = 1;
+            this.Volta.HeaderText = "Volta";
+            this.Volta.Name = "Volta";
+            // 
+            // btnOrigem
+            // 
+            this.btnOrigem.Location = new System.Drawing.Point(601, 40);
+            this.btnOrigem.Name = "btnOrigem";
+            this.btnOrigem.Size = new System.Drawing.Size(57, 23);
+            this.btnOrigem.TabIndex = 2;
+            this.btnOrigem.Text = "Buscar";
+            this.btnOrigem.UseVisualStyleBackColor = true;
+            this.btnOrigem.Click += new System.EventHandler(this.btnOrigem_Click);
+            // 
+            // tbxOrigemPac
+            // 
+            this.tbxOrigemPac.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tbxOrigemPac.Location = new System.Drawing.Point(210, 36);
+            this.tbxOrigemPac.Name = "tbxOrigemPac";
+            this.tbxOrigemPac.Size = new System.Drawing.Size(385, 29);
+            this.tbxOrigemPac.TabIndex = 1;
             // 
             // label2
             // 
@@ -165,9 +191,9 @@ namespace ProjetoAgenciaTI11T.View
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(9, 39);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(182, 21);
+            this.label2.Size = new System.Drawing.Size(195, 21);
             this.label2.TabIndex = 0;
-            this.label2.Text = "Digite o nome do cliente:";
+            this.label2.Text = "Digite a Origem do pacote:";
             // 
             // tabPage2
             // 
@@ -365,9 +391,101 @@ namespace ProjetoAgenciaTI11T.View
             this.label3.TabIndex = 3;
             this.label3.Text = "Digite o nome do código:";
             // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.dataGridViewDestino);
+            this.tabPage3.Controls.Add(this.btnDestino);
+            this.tabPage3.Controls.Add(this.tbxDestinoPac);
+            this.tabPage3.Controls.Add(this.label9);
+            this.tabPage3.Location = new System.Drawing.Point(4, 24);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(757, 339);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Pesquisar por Destino";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
             // openFileDialogImagem
             // 
             this.openFileDialogImagem.FileName = "openFileDialog1";
+            // 
+            // dataGridViewDestino
+            // 
+            this.dataGridViewDestino.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewDestino.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewDestino.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6});
+            this.dataGridViewDestino.Location = new System.Drawing.Point(6, 70);
+            this.dataGridViewDestino.Name = "dataGridViewDestino";
+            this.dataGridViewDestino.RowHeadersVisible = false;
+            this.dataGridViewDestino.RowTemplate.Height = 25;
+            this.dataGridViewDestino.Size = new System.Drawing.Size(745, 248);
+            this.dataGridViewDestino.TabIndex = 7;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn1.HeaderText = "Código";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Width = 60;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "Valor";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.HeaderText = "Origem";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.HeaderText = "Destino";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.HeaderText = "Ida";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.HeaderText = "Volta";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // btnDestino
+            // 
+            this.btnDestino.Location = new System.Drawing.Point(601, 25);
+            this.btnDestino.Name = "btnDestino";
+            this.btnDestino.Size = new System.Drawing.Size(57, 23);
+            this.btnDestino.TabIndex = 6;
+            this.btnDestino.Text = "Buscar";
+            this.btnDestino.UseVisualStyleBackColor = true;
+            this.btnDestino.Click += new System.EventHandler(this.btnDestino_Click);
+            // 
+            // tbxDestinoPac
+            // 
+            this.tbxDestinoPac.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tbxDestinoPac.Location = new System.Drawing.Point(210, 21);
+            this.tbxDestinoPac.Name = "tbxDestinoPac";
+            this.tbxDestinoPac.Size = new System.Drawing.Size(385, 29);
+            this.tbxDestinoPac.TabIndex = 5;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label9.Location = new System.Drawing.Point(9, 24);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(196, 21);
+            this.label9.TabIndex = 4;
+            this.label9.Text = "Digite o Destino do pacote:";
             // 
             // TelaPesquisarPacotes
             // 
@@ -381,10 +499,13 @@ namespace ProjetoAgenciaTI11T.View
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCliente)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPacote)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxImagem)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDestino)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -395,13 +516,9 @@ namespace ProjetoAgenciaTI11T.View
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.DataGridView dataGridViewCliente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Código;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Foto;
-        private System.Windows.Forms.Button btnNome;
-        private System.Windows.Forms.TextBox tbxNomeCli;
+        private System.Windows.Forms.DataGridView dataGridViewPacote;
+        private System.Windows.Forms.Button btnOrigem;
+        private System.Windows.Forms.TextBox tbxOrigemPac;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Button btnDeletar;
@@ -423,5 +540,22 @@ namespace ProjetoAgenciaTI11T.View
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.RichTextBox rtbDescricao;
         private System.Windows.Forms.OpenFileDialog openFileDialogImagem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Código;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Valor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Origem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Destino;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Ida;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Volta;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.DataGridView dataGridViewDestino;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.Button btnDestino;
+        private System.Windows.Forms.TextBox tbxDestinoPac;
+        private System.Windows.Forms.Label label9;
     }
 }
