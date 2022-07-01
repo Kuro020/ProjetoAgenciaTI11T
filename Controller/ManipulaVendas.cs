@@ -123,18 +123,16 @@ namespace ProjetoAgenciaTI11T.Controller
 
             try
             {
+                cmd.Parameters.AddWithValue("@codigoVen", Vendas.CodigoVen);
                 cmd.Parameters.AddWithValue("@pagoVen", Vendas.PagoVen);
-                cmd.Parameters.AddWithValue("@codigoCliFK", Clientes.CodigoCli);
-                cmd.Parameters.AddWithValue("@codigoFunFK", Funcionario.CodigoFun);
-                cmd.Parameters.AddWithValue("@codigoPacFK", Pacotes.CodigoPac);
                 cn.Open();
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Venda alterado com sucesso", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Venda alterado com sucesso" +Vendas.PagoVen + Vendas.CodigoVen, "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
 
             catch (Exception e)
             {
-                MessageBox.Show(e.Message, "A Venda não foi alterado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(e.Message, "A Venda não foi alterada", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             finally

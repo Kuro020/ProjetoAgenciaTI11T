@@ -27,23 +27,20 @@ namespace ProjetoAgenciaTI11T.View
             }
             else
             {
-                Clientes.NomeCli = tbxNome.Text;
-                Clientes.EmailCli = tbxEmail.Text;
-                Clientes.SenhaCli = tbxSenha.Text;
+                Vendas.PagoVen = Convert.ToInt32(tbxValor.Text);
+                Clientes.CodigoCli = Convert.ToInt32(tbxCliente.Text);
+                Funcionario.CodigoFun = Convert.ToInt32(tbxFuncionario.Text);
+                Pacotes.CodigoPac = Convert.ToInt32(tbxPacote.Text);
 
-                MemoryStream memoryStream = new MemoryStream();
-                pbxImagem.Image.Save(memoryStream, pbxImagem.Image.RawFormat);
-                Clientes.ImageCli = memoryStream.ToArray();
-
-                ManipulaCliente manipulaClientes = new ManipulaCliente();
-                manipulaClientes.cadastrarCliente();
+                ManipulaVendas manipulaVendas = new ManipulaVendas();
+                manipulaVendas.cadastrarVenda();
             }
-            if (Clientes.Retorno == "Sim")
+            if (Vendas.Retorno == "Sim")
             {
                 LimparTela();
                 return;
             }
-            else if (Clientes.Retorno == "Não")
+            else if (Vendas.Retorno == "Não")
             {
                 fecharCadastro();
                 return;
@@ -141,6 +138,21 @@ namespace ProjetoAgenciaTI11T.View
                 tbxOrigem.Text = string.Empty;
                 tbxDestino.Text = string.Empty;
                 return;
+            }
+        }
+        public void fecharCadastro()
+        {
+            this.Close();
+        }
+
+        public void LimparTela()
+        {
+            foreach (Control ctl in this.Controls)
+            {
+                if (ctl is TextBox)
+                {
+                    ctl.Text = string.Empty;
+                }
             }
         }
     }

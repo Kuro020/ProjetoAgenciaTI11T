@@ -31,6 +31,8 @@ namespace ProjetoAgenciaTI11T.View
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tbxCodPac = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnDeletar = new System.Windows.Forms.Button();
             this.btnAlterar = new System.Windows.Forms.Button();
             this.tbxCodFun = new System.Windows.Forms.TextBox();
@@ -42,8 +44,6 @@ namespace ProjetoAgenciaTI11T.View
             this.btnCod = new System.Windows.Forms.Button();
             this.tbxCod = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.tbxCodPac = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.SuspendLayout();
@@ -80,6 +80,24 @@ namespace ProjetoAgenciaTI11T.View
             this.tabPage2.Text = "Pesquisar por código";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // tbxCodPac
+            // 
+            this.tbxCodPac.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tbxCodPac.Location = new System.Drawing.Point(194, 213);
+            this.tbxCodPac.Name = "tbxCodPac";
+            this.tbxCodPac.Size = new System.Drawing.Size(234, 29);
+            this.tbxCodPac.TabIndex = 24;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(51, 216);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(134, 21);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "Código do Pacote:";
+            // 
             // btnDeletar
             // 
             this.btnDeletar.Location = new System.Drawing.Point(397, 301);
@@ -88,6 +106,7 @@ namespace ProjetoAgenciaTI11T.View
             this.btnDeletar.TabIndex = 22;
             this.btnDeletar.Text = "Deletar";
             this.btnDeletar.UseVisualStyleBackColor = true;
+            this.btnDeletar.Click += new System.EventHandler(this.btnDeletar_Click);
             // 
             // btnAlterar
             // 
@@ -97,6 +116,7 @@ namespace ProjetoAgenciaTI11T.View
             this.btnAlterar.TabIndex = 21;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // tbxCodFun
             // 
@@ -179,24 +199,6 @@ namespace ProjetoAgenciaTI11T.View
             this.label3.Size = new System.Drawing.Size(185, 21);
             this.label3.TabIndex = 3;
             this.label3.Text = "Digite o código da venda:";
-            // 
-            // tbxCodPac
-            // 
-            this.tbxCodPac.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbxCodPac.Location = new System.Drawing.Point(194, 213);
-            this.tbxCodPac.Name = "tbxCodPac";
-            this.tbxCodPac.Size = new System.Drawing.Size(234, 29);
-            this.tbxCodPac.TabIndex = 24;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(51, 216);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(134, 21);
-            this.label1.TabIndex = 23;
-            this.label1.Text = "Código do Pacote:";
             // 
             // TelaPesquisarVendas
             // 

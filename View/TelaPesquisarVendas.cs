@@ -59,5 +59,72 @@ namespace ProjetoAgenciaTI11T.View
                 tbxCodPac.Text = Pacotes.CodigoPac.ToString();
             }
         }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+            if (tbxCod.Text == "")
+            {
+                MessageBox.Show("Digite um código de vendas", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                tbxCod.Text = string.Empty;
+                tbxCod.Focus();
+                tbxCod.SelectAll();
+                tbxCodCli.Text = string.Empty;
+                tbxCodFun.Text = string.Empty;
+                tbxCodPac.Text = string.Empty;
+                tbxValor.Text = string.Empty;
+            }
+            else
+            {
+                var resposta = MessageBox.Show("Deseja Alterar os dados da Venda " + tbxCod.Text + "?",
+                "Atenção", MessageBoxButtons.YesNo, MessageBoxIcon.Stop);
+
+                if (resposta == DialogResult.Yes)
+                {
+                    Vendas.CodigoVen = Convert.ToInt32(tbxCod.Text);
+        
+                    Vendas.PagoVen = Convert.ToInt32(tbxValor.Text);
+
+                    ManipulaVendas manipulaVendas = new ManipulaVendas();
+                    manipulaVendas.alterarVen();
+                }
+            }
+        }
+
+        private void btnDeletar_Click(object sender, EventArgs e)
+        {
+            if (tbxCod.Text == "")
+            {
+                MessageBox.Show("Digite um código de venda", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                tbxCod.Text = string.Empty;
+                tbxCod.Focus();
+                tbxCod.SelectAll();
+                tbxCodCli.Text = string.Empty;
+                tbxCodFun.Text = string.Empty;
+                tbxCodPac.Text = string.Empty;
+            }
+            else
+            {
+                var resposta = MessageBox.Show("Deseja excluir a Venda " + tbxCod.Text + "?",
+                "Atenção", MessageBoxButtons.YesNo, MessageBoxIcon.Stop);
+
+                if (resposta == DialogResult.Yes)
+                {
+                    Vendas.CodigoVen = Convert.ToInt32(tbxCod.Text);
+
+                    ManipulaVendas manipulaVendas = new ManipulaVendas();
+                    manipulaVendas.deletarVen();
+                }
+
+                tbxCod.Text = string.Empty;
+                tbxCod.Focus();
+                tbxCod.SelectAll();
+                tbxCodCli.Text = string.Empty;
+                tbxCodFun.Text = string.Empty;
+                tbxCodPac.Text = string.Empty;
+                return;
+            }
+        }
     }
 }
